@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font: normal 25px Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.main {
+    background-image: url('../img/bg.jpg');
+    background-size: auto;
+    height: 100%;
+    position: relative;
+}
+
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 300px;
+    height: auto;
+
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 3px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+    height: 80px;
+    text-align: right;
+    background-color: rgba(0,0,0,0.2);
+
+    color: #fff;
+    padding: 20px 10px;
+    font-size: 27px;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+
+.keys {
+    font-size: 0;
+    padding: 5px 12px;
+}
+
+.keys span {
+    background-color: #ccc;
+    display: inline-block;
+    width: 63px;
+    margin: 0 8px 11px 0;
+    height: 63px;
+    border-radius: 100%;
+    color: #00000096;
+    text-align: center;
+    line-height: 63px;
+    cursor: pointer;
+    user-select: none;
+
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease;
+}
+
+.keys span.operator {
+    background-color: #ff9200;
+    margin-right: 0;
+    color: #fff;
+}
+
+.keys span.zero {
+    width: 134px;
+    border-radius: 35px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.keys span:hover {
+    background: rgba(255,255,255,0.8);
+    color: #333;
+}
+
+.keys span:active {
+    box-shadow: 0 0 rgba(0, 0, 0, 0.2);
+    top: 4px;
+}
