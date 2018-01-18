@@ -24,7 +24,7 @@ body, html {
     width: 300px;
     height: auto;
 
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
@@ -32,7 +32,7 @@ body, html {
 .result {
     height: 80px;
     text-align: right;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 
     color: #fff;
     padding: 20px 10px;
@@ -80,7 +80,7 @@ body, html {
 }
 
 .keys span:hover {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     color: #333;
 }
 
