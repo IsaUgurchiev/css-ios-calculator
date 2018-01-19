@@ -10,7 +10,8 @@ body, html {
 
 .main {
     background-image: url('../img/bg.jpg');
-    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
     position: relative;
 }
