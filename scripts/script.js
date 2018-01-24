@@ -32,7 +32,7 @@
             operation = null;
             prev = 0;
             cur = 0;
-            return false;
+            return true;
         }
 
         if (resultStr.innerHTML === '0' && btn !== ',') {
@@ -40,7 +40,7 @@
         }
 
         if (btn === ',' && resultStr.innerHTML.indexOf(',') > -1) {
-            return false;
+            return true;
         }
 
         if (btn === '=') {
@@ -50,7 +50,7 @@
                 prev = null;
             }
 
-            return false;
+            return true;
         }
 
         if (operationsAdditional[btn]) {
@@ -67,7 +67,7 @@
             }
 
             operation = operationsArithmetic[btn];
-            return false;
+            return true;
         }
 
         if (!prev && operation) {
@@ -77,6 +77,8 @@
 
         resultStr.innerHTML = resultStr.innerHTML + btn;
         cur = resultStr.innerHTML;
+
+        return true;
     };
 
     function addition(op1, op2) {
