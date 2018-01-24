@@ -23,7 +23,7 @@
             btn = target.innerHTML;
 
         if (target.tagName !== 'SPAN') {
-            return false;
+            return true;
         }
         setActiveClass(keysSpan, target);
 
