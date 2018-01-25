@@ -17,13 +17,11 @@
         operation = null;
 
     keys.onclick = function (e) {
-        e.preventDefault();
-
         var target = e.target,
             btn = target.innerHTML;
 
         if (target.tagName !== 'SPAN') {
-            return true;
+            return false;
         }
         setActiveClass(keysSpan, target);
 
@@ -32,7 +30,7 @@
             operation = null;
             prev = 0;
             cur = 0;
-            return true;
+            return false;
         }
 
         if (resultStr.innerHTML === '0' && btn !== ',') {
@@ -40,7 +38,7 @@
         }
 
         if (btn === ',' && resultStr.innerHTML.indexOf(',') > -1) {
-            return true;
+            return false;
         }
 
         if (btn === '=') {
@@ -50,7 +48,7 @@
                 prev = null;
             }
 
-            return true;
+            return false;
         }
 
         if (operationsAdditional[btn]) {
@@ -67,7 +65,7 @@
             }
 
             operation = operationsArithmetic[btn];
-            return true;
+            return false;
         }
 
         if (!prev && operation) {
@@ -78,7 +76,7 @@
         resultStr.innerHTML = resultStr.innerHTML + btn;
         cur = resultStr.innerHTML;
 
-        return true;
+        return false;
     };
 
     function addition(op1, op2) {
